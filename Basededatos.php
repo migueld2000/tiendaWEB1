@@ -87,5 +87,23 @@ class Basededatos
             echo ("error elimiando los datos");
         }
     }
+    public function editarDatos($consultaSQL)
+    {
+        //1.Se debe establecer una conexion a BD
+        $conexionBD = $this->conectarBD();
+
+        //2.Preparar la consulta para insertar datos
+        $consultaeditarDatos = $conexionBD->prepare($consultaSQL);
+
+        //3.Ejecutar la consulta
+        $resultado = $consultaeditarDatos->execute();
+
+        //4.Validar la operacion
+        if ($resultado) {
+            echo ("Exito editando los datos");
+        } else {
+            echo ("error editando los datos");
+        }
+    }
 
 }
