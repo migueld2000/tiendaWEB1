@@ -19,5 +19,9 @@ if(isset($_POST["botonEnvio"]))
     //4.Utilizar el metodo deagregarDatos()
     $transaccion->agregarDatos($consultaSQL);
 
+    //6. redirecion
+
+    header("location:Productos.php");
+
 }
 ?>
