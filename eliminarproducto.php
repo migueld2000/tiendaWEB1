@@ -10,7 +10,7 @@ $consultaSQl="DELETE FROM productos WHERE ID_producto='$id'";
 
 //5.ejecutar el metodo eliminarUsuarios
 $transaccion->eliminarDatos($consultaSQl);
+//6. redirecion
 
-//6. redirección
-encabezado("location:ProductosBodega.php");
+header("location:ProductosBodega.php");
 ?>
