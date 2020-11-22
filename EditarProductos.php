@@ -26,7 +26,7 @@ if(isset($_POST["Editar"]))
 
     //6. redirecion
 
-    //header("location:ProductosBodega.php");
+    header("location:ProductosBodega.php");
 
 }
 
